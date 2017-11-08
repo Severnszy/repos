@@ -1,0 +1,9 @@
+{
+    "editor.autoClosingBrackets": false,
+    "editor.fontFamily": "'Roboto Mono', monospace",
+    "editor.fontSize": 14,
+    "editor.insertSpaces": false,
+    "editor.renderWhitespace": "all",
+    "editor.smoothScrolling": true,
+    "workbench.colorTheme": "Visual Studio Light"
+}
