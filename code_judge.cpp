@@ -31,9 +31,9 @@ int main()
 		<< "If you haven't, then move the files into the same directory to proceed.\n\n";*/
 	
 	cout
-		<< "The program to be judged and the CodeJudge in the same directory and the input\n"
-		<< "and output data in a subfolder named \"data\" and the file extension MUST be *.in\n"
-		<< "(input data file) and *.out (output data file).\n"
+		<< "The program to be judged and the CodeJudge in the same directory and the test\n"
+		<< "data in a subfolder named \"data\" and the file extension MUST be .in (input)\n"
+		<< "and .out (output).\n"
 		<< "The program to be judged must read input from standard input and write output\n"
 		<< "to standard output. (NOT file I/O!).\n"
 		<< "Before you proceed, please check all of the above. After you've done that,\n"
