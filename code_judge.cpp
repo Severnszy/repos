@@ -17,15 +17,14 @@ void gotoxy(int x, int y);
 void disp_description();
 void disp_info();
 void disp_instructions();
+void pause();
 
 int main()
 {
 	disp_info();
 	cout << '\n';
 	disp_description();
-	cout << "Press any key to continue . . .";
-	getch();
-	cout << "\r                               \r";
+	pause();
 	cout << '\n';
 
 	disp_instructions();
@@ -36,6 +35,7 @@ int main()
 
 	cout << "Enter the name of the program to be judged (without file extension):\n";
 	cin >> prog_name;
+	cout << '\n';
 	cout << "Enter the amount of test data files:\n";
 	cin >> ntest;
 	cout << '\n';
@@ -73,12 +73,20 @@ int main()
 
 		if (ofile_contents == std_ofile_contents)
 		{
-			cout << "Test #" << i << ": Accepted.\n\n";
+			cout << "Test #" << i << ": ";
+			SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_GREEN | FOREGROUND_INTENSITY);
+			cout << "Accepted.\n\n";
+			SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_BLUE | FOREGROUND_GREEN | FOREGROUND_RED);
 			nac++;
 		}
 		else
 		{
-			cout << "Test #" << i << ": Unaccepted.\n\n";
+			cout << "Test #" << i << ": ";
+			SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_RED | FOREGROUND_INTENSITY);
+			cout << "Unaccepted!\n";
+			//pause();
+			cout << '\n';
+			SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_BLUE | FOREGROUND_GREEN | FOREGROUND_RED);
 		}
 	}
 	
@@ -87,7 +95,12 @@ int main()
 
 	cout << "Your final score: " << (double)nac / (double)ntest * 100.0 << '\n';
 	if (nac == ntest) cout << "Congratulations! Your program produced all correct answer(s)!\n";
-	else cout << "You program produced " << nac << "/" << ntest << " correct answer(s). Please check your source code for mistakes and try again.\n";
+	else
+	{
+		cout
+			<< "You program produced " << nac << "/" << ntest << " correct answer(s).\n"
+			<< "Please check your source code for mistakes and try again.\n";
+	}
 
 	return 0;
 }
@@ -149,3 +162,10 @@ void disp_instructions()
 		<< "press any key to continue.\n";
 	getch();
 }
+
+void pause()
+{
+	cout << "Press any key to continue . . .";
+	getch();
+	cout << "\r                               \r";	
+}	
