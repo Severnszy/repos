@@ -16,15 +16,14 @@ string to_string(int);
 void disp_description();
 void disp_info();
 void disp_instructions();
+void pause();
 
 int main()
 {
 	disp_info();
 	cout << '\n';
 	disp_description();
-	cout << "Press any key to continue . . .";
-	getch();
-	cout << "\r                               \r";
+	pause();
 	cout << '\n';
 
 	disp_instructions();
@@ -35,8 +34,10 @@ int main()
 
 	cout << "Enter the name of the standard program (without file extension):\n";
 	cin >> std_prog_name;
-	cout << "Enter the name of the program to be judged:\n";
+	cout << '\n';
+	cout << "Enter the name of the program to be judged (without file extension):\n";
 	cin >> prog_name;
+	cout << '\n';
 	cout << "Enter the amount of test data files:\n";
 	cin >> ntest;
 	cout << '\n';
@@ -115,4 +116,11 @@ void disp_instructions()
 		<< "Before you proceed, please check all of the above. After you've done that,\n"
 		<< "press any key to continue.\n";
 	getch();
+}
+
+void pause()
+{
+	cout << "Press any key to continue . . .";
+	getch();
+	cout << "\r                               \r";
 }
