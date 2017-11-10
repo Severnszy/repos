@@ -12,7 +12,6 @@ string ifile_name, std_ofile_name, ofile_name;
 string ofile_contents, std_ofile_contents;
 string cmd;
 
-string to_string(int);
 void gotoxy(int x, int y);
 void disp_description();
 void disp_info();
@@ -103,15 +102,6 @@ int main()
 	}
 
 	return 0;
-}
-
-string to_string(int x)
-{
-	stringstream ss;
-	string str;
-	ss << x;
-	str = ss.str();
-	return str;
 }
 
 void gotoxy(int x, int y)
