@@ -12,7 +12,6 @@ string ifile_name, std_ofile_name;
 string std_ofile_contents;
 string cmd;
 
-string to_string(int);
 void disp_description();
 void disp_info();
 void disp_instructions();
@@ -67,15 +66,6 @@ int main()
 
 	cout << "Done.\n";
 	return 0;
-}
-
-string to_string(int x)
-{
-	stringstream ss;
-	string str;
-	ss << x;
-	str = ss.str();
-	return str;
 }
 
 void disp_description()
