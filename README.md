@@ -1,4 +1,4 @@
-# README
+# README for Repository `repos`
 ## Description of the repository
 This is my first repository. It is used to keep different kinds of files, kept in separate braches, for instance documents are kept in the `documents` branch. Descriptions of each branch are as follows:
 * [master](https://github.com/medoric/repos/tree/master)
