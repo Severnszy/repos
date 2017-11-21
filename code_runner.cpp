@@ -43,8 +43,8 @@ int main()
 
 	for (int i = 1; i <= ntest; i++)
 	{
-		ifile_name = "data\\" + prog_name + to_string(i) + ".in";
-		std_ofile_name = "data\\" + prog_name + to_string(i) + ".out";
+		ifile_name = "data\\" + prog_name + '\\' + prog_name + to_string(i) + ".in";
+		std_ofile_name = "data\\" + prog_name + '\\' + prog_name + to_string(i) + ".out";
 		cmd = std_prog_name + " < " + ifile_name + " > " + std_ofile_name;
 		system(cmd.c_str());
 
@@ -91,8 +91,8 @@ void disp_instructions()
 		<< "How to use CodeRunner:\n\n"
 		<< "Location of the files:\n"
 		<< "The standard program (the program which produces the correct answer) and the\n"
-		<< "the CodeRunner must be under the same directory and the test data under a\n"
-		<< "subdirectory \"data\".\n"
+		<< "the CodeRunner must be under the same directory and the test data in a folder\n"
+		<< "under a subdirectory \"data\". The folder must have the same name as the program.\n"
 		<< '\n'
 		<< "I/O:\n"
 		<< "The standard program must read input from standard input and write output to\n"
