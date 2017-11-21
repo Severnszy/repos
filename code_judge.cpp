@@ -40,7 +40,7 @@ int main()
 	cout << '\n';
 
 	ofile_name = "data\\" + prog_name + ".out";
-	
+
 	for (int i = 1; i <= ntest; i++)
 	{
 		ifile_name = "data\\" + prog_name + to_string(i) + ".in";
@@ -48,7 +48,7 @@ int main()
 		cmd = prog_name + " < " + ifile_name + " > " + ofile_name;
 
 		system(cmd.c_str());
-		
+
 		ofile_contents.clear();
 		std_ofile_contents.clear();
 
@@ -88,7 +88,7 @@ int main()
 			SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_BLUE | FOREGROUND_GREEN | FOREGROUND_RED);
 		}
 	}
-	
+
 	cmd = "del " + ofile_name;
 	system(cmd.c_str());
 
@@ -126,7 +126,7 @@ void disp_info()
 {
 	cout
 		<< "CodeJudge\n"
-		<< "Version 1.0.0.0\n"
+		<< "Version 1.0.0.1\n"
 		<< "Copyright (c) 2017 Medoric\n";
 }
 
@@ -136,7 +136,8 @@ void disp_instructions()
 		<< "How to use CodeJudge:\n\n"
 		<< "Location:\n"
 		<< "The program to be judged and the CodeJudge must be under the same directory and\n"
-		<< "the test data under a subdirectory \"data\".\n"
+		<< "the test data in a folder  under a subdirectory \"data\". The folder must have the\n"
+		<< "same name as the program.\n"
 		<< '\n'
 		<< "I/O:\n"
 		<< "The program to be judged must read input from standard input and write output\n"
@@ -157,5 +158,5 @@ void pause()
 {
 	cout << "Press any key to continue . . .";
 	getch();
-	cout << "\r                               \r";	
-}	
+	cout << "\r                               \r";
+}
