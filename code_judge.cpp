@@ -39,12 +39,12 @@ int main()
 	cin >> ntest;
 	cout << '\n';
 
-	ofile_name = "data\\" + prog_name + ".out";
+	ofile_name = prog_name + ".out";
 
 	for (int i = 1; i <= ntest; i++)
 	{
-		ifile_name = "data\\" + prog_name + to_string(i) + ".in";
-		std_ofile_name = "data\\" + prog_name + to_string(i) + ".out";
+		ifile_name = "data\\" + prog_name + '\\' + prog_name + to_string(i) + ".in";
+		std_ofile_name = "data\\" + prog_name + '\\' + prog_name + to_string(i) + ".out";
 		cmd = prog_name + " < " + ifile_name + " > " + ofile_name;
 
 		system(cmd.c_str());
