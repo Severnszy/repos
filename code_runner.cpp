@@ -81,7 +81,7 @@ void disp_info()
 {
 	cout
 		<< "CodeRunner\n"
-		<< "Version 1.0.0.0\n"
+		<< "Version 1.0.0.1\n"
 		<< "Copyright (c) 2017 Medoric\n";
 }
 
