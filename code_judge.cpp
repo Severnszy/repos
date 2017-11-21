@@ -136,8 +136,8 @@ void disp_instructions()
 		<< "How to use CodeJudge:\n\n"
 		<< "Location:\n"
 		<< "The program to be judged and the CodeJudge must be under the same directory and\n"
-		<< "the test data in a folder  under a subdirectory \"data\". The folder must have the\n"
-		<< "same name as the program.\n"
+		<< "the test data in a folder  under a subdirectory \"data\". The folder must have\n"
+		<< "the same name as the program.\n"
 		<< '\n'
 		<< "I/O:\n"
 		<< "The program to be judged must read input from standard input and write output\n"
