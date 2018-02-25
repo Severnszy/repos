@@ -14,4 +14,4 @@ For keeping documents. There are some special documents including `.txt` files (
 * [miscellaneous](https://github.com/medoric/repos/tree/miscellaneous)
 For keeping other kinds of files that doesn't seem much appropriate to keep in the other braches.
 * [source-codes](https://github.com/medoric/repos/tree/source-codes)
-For keeping the source codes of some C++ programs (the programming language I'm currently using). They are not currently kept in the `documents` branch but I'm going to merge them later.
+For keeping the source codes of some C++ programs (the programming language I'm currently using).
