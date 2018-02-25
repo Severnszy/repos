@@ -2,7 +2,7 @@
 ## The repository
 This is my first repository. Unlike most repositories which were used for keeping projects, `repos` is used to keep different kinds of files which have almost nothing to do with each other, kept in separate braches, for instance documents are kept in the `documents` branch.
 
-## The braches in `repos`
+## The branches in `repos`
 * [master](https://github.com/medoric/repos/tree/master)
 The master branch. Used for nothing in perticular.
 * [applications](https://github.com/medoric/repos/tree/applications)
